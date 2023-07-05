@@ -8,13 +8,14 @@ const port = 4000
 
 
 
-app.use(express.json())
+// app.use(express.json())
 
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(express.static('public'));
 app.set('view engine', 'hbs')
 
 
-app.use(express.static(path.join(__dirname, 'public')));
-app.use(bodyParser.urlencoded({extended: true}));
+
 
 app.get('/', (req, res) => {
   res.render(__dirname + '/templates/login')
@@ -24,26 +25,27 @@ app.get('/', (req, res) => {
 
 // })
 
-// app.get('/signup', (req, res) => {
-//   res.render('signup')
-// })
+app.get('/signup', (req, res) => {
+  res.render(__dirname + '/templates/signup')
+})
 
-// app.post('/signup', (req, res) => {
+app.post('/signup', (req, res) => {
 
-//   const data = {
-//     firstName: req.body.fName,
-//     lastName: req.body.lName,
-//     email: req.body.EID,
-//     username: req.body.UID,
-//     password: req.body.PID
-//   }
+  const data = {
+    firstName: req.body.fName,
+    lastName: req.body.lName,
+    email: req.body.EID,
+    username: req.body.UID,
+    password: req.body.PID
+  }
   
-//   function storage(data) {
-//     collection.insertMany([data])
-//   }
+  function storage(data) {
+    collection.insertMany([data])
+  }
 
-//   res.render('home')
-// })
+  res.render(__dirname + '/templates/home')
+})
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

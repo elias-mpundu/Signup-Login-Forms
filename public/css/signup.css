@@ -9,7 +9,6 @@
 }
 
 .introduction {
-    background: rgb(1,0,15);
     background: linear-gradient(90deg, rgba(1,0,15,0.8938757631959033) 0%, rgba(9,9,121,1) 49%, rgba(0,212,255,0.9863127379858193) 100%);
     color: white;
 }

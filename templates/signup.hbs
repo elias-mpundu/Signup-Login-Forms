@@ -13,65 +13,38 @@
     <!-- CSS stylesheet -->
     <link rel="stylesheet" href="css/signup.css">
 </head>
-<body>
-    <section id="title" class="introduction" style="height: 100%">
-        <div class="container-fluid">
-            <!-- Navbar Section -->
-            <nav class="navbar navbar-expand-lg navbar-dark">
-
-                <a class="navbar-brand logo" href="#">ScaleFactor<sup>2</sup></a>
-    
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="">PRODUCTS</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="">ABOUT US</a>
-                        </li>
-                    </ul>
-                </div>    
-            </nav>
-            <div class="row">
-                <div class="col-md-8 text-center box">
-                    <div id="boxlogin">
-                        <form action="/signup" autocomplete="on" method="post">
-                            <h1 id="login">Sign Up</h1>
-                            <hr>
-                            <p>
-                                <div><label for="fName">First name</label></div>
-                                <input name="fName" required="required" type="text" placeholder="First Name">
-                            </p>
-                            <p>
-                                <div><label for="lName">Last name</label></div>
-                                <input name="lName" required="required" type="text" placeholder="Last Name">
-                            </p>
-                            <p>
-                                <div><label for="EID">Email</label></div>
-                                <input name="EID" required="required" type="text" placeholder="Email">
-                            </p>
-                            <p>
-                                <div><label for="UID">Username</label></div>
-                                <input name="UID" required="required" type="text" placeholder="Username">
-                            </p>
-                            <p>
-                                <div><label for="PID">Password</label></div>                                
-                                <input name="PID" required="required" type="password" placeholder="eg. X8df!90EO">
-                            </p>
-                            
-                            <hr>
-                            <button class="btn btn-primary loginBtn" type="submit">Sign Up</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
+<body class="introduction">
+    <section>
+        <div id="boxlogin" class="col-md-8 text-center box">
+            <form action="/signup" autocomplete="on" method="post">
+                <h1 id="login">Sign Up</h1>
+                <hr>
+                <p>
+                    <div><label for="fName">First name</label></div>
+                    <input name="fName" required="required" type="text" placeholder="First Name">
+                </p>
+                <p>
+                    <div><label for="lName">Last name</label></div>
+                    <input name="lName" required="required" type="text" placeholder="Last Name">
+                </p>
+                <p>
+                    <div><label for="EID">Email</label></div>
+                    <input name="EID" required="required" type="text" placeholder="Email">
+                </p>
+                <p>
+                    <div><label for="UID">Username</label></div>
+                    <input name="UID" required="required" type="text" placeholder="Username">
+                </p>
+                <p>
+                    <div><label for="PID">Password</label></div>                                
+                    <input name="PID" required="required" type="password" placeholder="eg. X8df!90EO">
+                </p>
+                <hr>
+                <button class="btn btn-primary loginBtn" type="submit">Sign Up</button>
+            </form>
         </div>
-        
     </section>
     
+    <script src="../index.js" type="module"></script>
 </body>
 </html>

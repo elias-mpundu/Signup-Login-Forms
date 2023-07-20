@@ -36,25 +36,21 @@ app.post('/login', async (req, res) => {
   const userUID = await User.findOne({username: uname})
 
   if(userUID === null) {
-    res.send("user does not exist")
+    console.log("User does not exist")
+    res.render(__dirname + '/templates/login')
   } else  {
     console.log()
   }
   
-  // if(User.username === uname && User.password === pword){
-  //   res.render(__dirname + '/templates/home')
-  // } else {
-  //   res.send("wrong inputs")
-  // }
 })
 
-app.get('', (req, res) => {
+// app.get('', (req, res) => {
 
-})
+// })
 
-app.post('', (req, res) => {
+// app.post('', (req, res) => {
 
-})
+// })
 
 
 app.get('/signup', (req, res) => {
@@ -78,7 +74,8 @@ app.post('/signup', async (req, res) => {
     res.render(__dirname + '/templates/login')
   }
   else {
-    res.send("user already exists")
+    console.log("User already exists, please login")
+    res.render(__dirname + '/templates/login')
   };
 })
 
